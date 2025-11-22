@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items card</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body class="p-5 bg-light">
+    <div class="container">
+        <h2 class="mb-4 text-primary">Items lists</h2>
+        <div class="row">
+            <% items.forEach(items =>{ %>
+                <div class="col-md-4 md-4">
+                    <div class="card shadow">
+                        <img src="<%= items.img %>" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-info"><%= items.name %></h5>
+                            <p class="card-text text-secondary">price: <%= items.rate %></p>
+                            <button class="btn btn-dark">Order now</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            <% }); %>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
